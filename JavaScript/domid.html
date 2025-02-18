@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 >getElementById()</h1>
+    <h3 id="head">This is text DOM manipulation in JS</h3>
+    <button onclick="getElement()">CLICK HERE</button>
+    <p id="para">Lorem ipsum dolor sit amet consectetur </p>
+
+    <script>
+        let getElement = () => {
+            let ele = document.getElementById('head'); // Correct ID
+            console.log(ele);
+            // 1. textContent
+            let textEle = ele.textContent; 
+            console.log(textEle);
+
+            let para = document.getElementById('para')
+            console.log(para)
+            let textPara = para.textContent; 
+            console.log(textPara);
+
+            // paraEle.textContent=`<strong>${textEle}</strong>` //here we cant use tag while using textContent-->it takes strong as content itself
+
+            //so we use innerHTML
+            // 2. innerHTML
+            paraEle.innerHTML=`<strong>${textEle}</strong>`
+
+            
+            // 3.value
+        }
+
+    </script>
+    <hr>
+    <input type="text" name="" id="uname" placeholder="enter your name" >
+    <button onclick="getvalue()"> get value </button>
+    <h1 id="res"></h1>
+    <script>
+        function getvalue(){
+            let inpEle=document.getElementById("uname")
+            console.log(inpEle)
+
+            let Username=inpEle.value
+            console.log(Username)
+
+            document.getElementById('res').textContent=`Entered name: ${Username}`
+            alert(`hello ${Username},welcome`)
+        }
+    </script>
+    <!-- SRC -->
+    <hr>
+    <button onclick="displayImage()">image</button>
+    <img id="img">
+    <script>
+        function displayImage(){
+            let imageElement=document.getElementById("img")
+            imageElement.style.display="block"
+        }
+    </script>
+
+</body>
+</html>

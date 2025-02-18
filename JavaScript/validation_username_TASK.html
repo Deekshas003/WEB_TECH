@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <!-- to make error bold  -->
+     <style>
+        .error{
+            color: red;
+            font-size: larger;
+            font-weight: bold;
+        }
+     </style>
+</head>
+<body>
+    <label for="">USERNAME</label>
+    <input type="text" name="" id="name">
+    <br><br>
+    <button onclick="validate()">CLICK HERE</button>
+    <!-- RESET BUTTON -->
+     <button onclick="reset()">RESET</button>
+
+    <p id="error" class="error"></p>
+
+<script>
+    function validate(){
+        let username = document.getElementById("name").value
+        let error = document.getElementById("error")
+
+
+        //to clear previous error text
+        error.textContent = ""
+
+        if (username===""){
+            error.textContent = "Name should not be empty"
+            return false   //stops here and tell error found
+        }
+
+        if(username.length<3 || username.length>15){
+            error.textContent = "Name should have atleast 3 character and less than 15"
+            return false
+        }
+        //username should not contain space in name
+        if(username.includes(" ")){
+            error.textContent = "Name should not contain space in it"
+            return false
+        }
+        else{
+            error.textContent = "Name valid"
+        }
+    }
+
+    function reset(){
+        document.getElementById('name').value = ''
+        document.getElementById('error').textContent = ''
+    }
+</script>
+</body>
+</html>

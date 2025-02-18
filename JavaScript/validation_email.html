@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+
+    <label for="email">Enter Email:</label>
+    <input type="text" id="email">
+    <p id="emailErr" style="color: red;"></p>
+
+    <button onclick="validateEmail()">Submit</button>
+
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let emailErr = document.getElementById("emailErr");
+
+            // Clear previous error
+            emailErr.textContent = "";
+
+            // ✅ 1. Check if email is empty
+            if (email === "") {
+                emailErr.textContent = "Email cannot be empty!";
+                return false;
+            }
+
+            // ✅ 2. Check if email contains @ and .com
+            if (!email.includes("@") || !email.includes(".com")) {
+                emailErr.textContent = "Invalid email format! Must contain '@' and '.com'.";
+                return false;
+            }
+
+            // ✅ If valid
+            alert("Email is valid!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

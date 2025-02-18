@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box-one{
+            border:dotted red 1.7px;
+            width:fit-content
+        }
+        #box-two{
+            margin: 5px;
+            border:dotted blue 1.7px;
+            width:fit-content
+        }
+    </style>
+</head>
+<body>
+    <div id="box-one">
+        <p>this is first paragraph in box-one</p>
+        <p>this is second paragraph in box-one</p>
+        <p>this is thrid paragraph in box-one</p>
+        <p>this is fourth paragraph in box-one</p>
+        <p>this is fifth paragraph in box-one</p>
+    </div>
+
+    <div id="box-two">
+        <p>this is first paragraph in box-two</p>
+        <p>this is second paragraph in box-two</p>
+        <p>this is thrid paragraph in box-two</p>
+        <p>this is fourth paragraph in box-two</p>
+        <p>this is fifth paragraph in box--two</p>
+    </div>
+    <button onclick="selectFirst()"> select one </button>
+    <button onclick="selectAll()"> select all </button>
+
+    <script>
+        function selectFirst(){
+            let firstDiv = document.getElementById("box-one")
+            let firstPara = firstDiv.querySelector("p")
+            firstPara.style.backgroundColor='lime'
+            firstPara.style.color='orange'
+        }
+
+        function selectAll() {
+            let secondDiv = document.getElementById("box-two");
+            let allParas = secondDiv.querySelectorAll("p");
+            console.log(allParas)
+
+            allParas.forEach(para => {
+                para.style.backgroundColor = 'lime';
+                para.style.color = 'orange';
+            });
+        }
+    </script>
+</body>
+</html>

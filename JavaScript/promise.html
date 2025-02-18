@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a" placeholder="Enter a">
+    <input type="text" id="b" placeholder="Enter b">
+    <button onclick="result()">Result</button>
+    <p id="result"></p>
+
+    <script>
+        function result() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            
+            // Check if inputs are numbers
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById('result').textContent = "Please enter valid numbers for both a and b.";
+                return;
+            }
+
+            let promise = new Promise((resolve, reject) => {
+                if (a + b === 10) {
+                    resolve("Success");
+                } else {
+                    reject("Failed");
+                }
+            });
+
+            promise.then(message => {
+                document.getElementById('result').textContent = message;
+            });
+
+            promise.catch(message => {
+                document.getElementById('result').textContent = message;
+            });
+        }
+    </script>
+</body>
+</html>

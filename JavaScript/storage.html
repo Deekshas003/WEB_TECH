@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="pcart" placeholder="ENTER CATEGORY">
+    <input type="text" name="" id="pname" placeholder="ENTER PRODUCT">
+    <button id="addbtn">ADD</button>
+    <hr>
+
+    <h2>DISPLAY </h2>
+    <input type="text" name="" id="search">
+    <button id="dispbtn">DISPLAY</button>
+    <p id="item"></p>
+    <hr>
+
+    <h2>DELETE</h2>
+    <input type="text" name="" id="delete">
+    <button id="delbtn">DELETE</button>
+    <hr>
+
+    <h2>CLEAR</h2>
+    <button id="clbtn">CLEAR</button>
+
+
+    <script>
+    document.getElementById("addbtn").addEventListener("click",()=>{
+        let category = document.getElementById("pcart").value
+        let product = document.getElementById("pname").value
+        window.localStorage.setItem(category,product)
+            })
+    document.getElementById("dispbtn").addEventListener("click",()=>{
+            let search = document.getElementById("search").value
+            document.getElementById('item').innerHTML= localStorage.getItem(search)
+
+})
+    document.getElementById("delbtn").addEventListener("click",()=>{
+                let delete1 = document.getElementById("delete").value
+                document.getElementById('item').innerHTML= localStorage.removeItem(delete1)
+
+            })
+    document.getElementById("clbtn").addEventListener("click",()=>{
+                document.getElementById('item').innerHTML= localStorage.clear()
+
+            })
+
+
+    </script>
+</body>
+</html>

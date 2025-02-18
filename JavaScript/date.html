@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id ="disp"></p>
+    <script>
+        let date = new Date()
+        console.log(date)
+        document.getElementById('disp').textContent=date
+        console.log(date)
+
+        //1,2,3,4,5,6
+        let allDays=["sunday","monday","tuesday","wednesday","thursday","friay","saturday"]
+        let day=date.getDay()
+        console.log('today is',allDays[day])
+
+
+        let month=date.getMonth()
+        console.log("current month",month)
+
+
+        let currDate=date.getDate()
+        console.log("current date",currDate)
+
+        let year=date.getFullYear()
+        console.log("current year",year)
+
+        // time
+        let misc=date.getMilliseconds()
+        console.log("current millsec",misc)
+        let sec=date.getSeconds()
+        console.log("current sec",sec)
+        let min=date.getMinutes()
+        console.log("current min",min)
+        let hour1=date.getHours() 
+        console.log("current Hour",hour1)
+        let hour=date.getHours() - 12
+        console.log("current Hour",hour)
+    </script>
+
+
+</body>
+</html>

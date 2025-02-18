@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCHING WEATHER DATA</title>
+</head>
+<body>
+    <h1>WEATHER DATA</h1>
+    <button onclick="checker()">CHECK HERE</button>
+    <p id ="weather"></p>
+    <script>
+        function checker(){
+            let city1 = new Promise(resolve => setTimeout(()=>resolve("weather in bengaluru is 35 C"),5000))
+            let city2 = new Promise(resolve => setTimeout(()=>resolve("weather in chennai is 50 C"),10000))
+        
+            Promise.all([city1,city2])
+                .then(result=>{
+                    document.getElementById('weather').textContent= `weather report : ${result}`
+                })
+                .catch(error=>{
+                    document.getElementById('weather').textContent= "error in data"
+                })
+        }
+    </script>
+</body>
+</html>

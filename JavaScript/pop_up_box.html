@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>POP UP BOX</h1>
+
+    <h2>alert()</h2>
+    <button onclick="greet()">ALERT</button>
+
+    <hr>
+    
+    <h2>confirm()</h2>
+    <button onclick="savedata()">CONFIRM</button>
+
+    <hr>
+    
+    <h2>prompt()</h2>
+    <button onclick="getdata()">PROMPT</button>
+
+    <script>
+        function greet() {
+            alert("Welcome to JS class");
+        }
+
+        function savedata() {
+            let data = confirm("Do you want to save the data?");
+            console.log(data);
+            let decision = data ? "Your data is saved" : "Your data is not saved";
+            console.log(decision);
+        }
+
+        function getdata() {
+            let name = prompt("Enter your name", "Deeksha"); // 2nd argument is default and optional
+            console.log(name);
+        }
+    </script>
+</body>
+</html>

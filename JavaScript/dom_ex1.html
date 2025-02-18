@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="inputVal">
+    <button onclick="uppercase()">UPPERCASE</button>
+    <input type="text" name="" id="outputVal">
+    <script>
+        function uppercase() {
+            let input = document.getElementById("inputVal").value
+            let output = document.getElementById("outputVal")
+            output.value= input.toUpperCase()
+        }
+
+    </script>
+</body>
+</html>

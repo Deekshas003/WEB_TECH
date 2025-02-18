@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT HANDLING</title>
+    <style>
+        img{
+            width:100px;
+        }
+        #inpfocus{
+            height:50px;
+            width:50px;
+            border-radius: 100px;
+            outline:none;
+            border: red solid 1px;
+        }
+    </style>
+</head>
+<body onload="alert('content loaded')">
+
+    <p id="head" onclick="changeText()"> who are you?</p>
+
+    <script>
+        function changeText(){
+            document.getElementById("head").innerHTML = "<h1 id='tail' ondblclick=changeColor() >i am JS</h1>"
+        }
+
+        function changeColor(){
+            document.getElementById("head").style.color = "red"
+        }
+    </script>
+
+    <img src="https://www.shutterstock.com/image-vector/turtle-600nw-91918649.jpg" alt="Turtle" id="animal" onmouseover="move()" onmouseout="stop()">
+
+    <script>
+        let image = document.getElementById("animal");
+
+        function move(){    
+            image.src = "https://media.tenor.com/NzQLTbwWv1wAAAAM/takadabear-turtle.gif"; // Corrected the URL for a gif
+        }
+
+        function stop(){
+            image.src = "https://www.shutterstock.com/image-vector/turtle-600nw-91918649.jpg"; // URL for the original image
+        }
+    </script>
+
+<img src="https://www.shutterstock.com/image-vector/turtle-600nw-91918649.jpg" alt="Turtle" id="animal" onclick="playSound()">
+<!-- audio -->
+    <script>
+        function playSound() {
+            var audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // URL of sound file
+            audio.play(); // Play the sound
+        }
+    </script>
+<!-- video -->
+    <script>
+        
+    </script>
+<hr>
+    <!-- ONKEYDOWN -->
+    <input type="text" name="" id="inp" onkeydown="display()" placeholder="enter your name">
+    <h1 id="msg"></h1>
+    <script>
+        function display(){
+            console.log("you pressed smtg")
+            let name = document.getElementById("inp").value
+            document.getElementById("msg").innerHTML =  `enter name is ${name}`
+        }
+    </script>
+
+
+<!-- onsubmit -->
+ <form action="" id="form-form">
+    <input type="text" name="" id="" placeholder="enter your name"> <br>
+    <input type="password" name="" id="" placeholder="enter your pass"><br>
+    <button>log in</button>  
+ </form>
+
+    <script>
+        document.getElementById("form-form").addEventListener("click", submitform)
+        function submitform(){
+            alert("form submiitted !!!!!!!!")
+        }
+    </script>
+
+<br>
+<!-- onchange -->
+ <select name="" id="skill" >
+    <option value="" hidden >choose here </option>
+    <option value="python">python</option>
+    <option value="sql">sql</option>
+    <option value="html">html</option>
+    <p id="res"></p>
+ </select>
+ <script>
+    let dropdown = document.getElementById("skill");
+    
+    dropdown.addEventListener("change", () => {
+        console.log(dropdown.value); // Log the selected value
+        document.getElementById("res").innerHTML = `Selected skill is ${dropdown.value}`; // Display selected skill
+    });
+</script>
+<br>
+<hr>
+<hr>
+
+<!-- onfocus and onblur-->
+<input type="text" name="" id="inpfocus">
+
+<script>
+    let inpElement=  document.getElementById("inpfocus")
+    inpElement.addEventListener('focus',()=>{
+        inpElement.style.width = "150px"
+        inpElement.style.transition="all 1s ease-in-out" 
+        })
+        
+        inpElement.addEventListener('blur',()=>{
+        inpElement.style.width = "50px"
+        })
+</script>
+
+<!-- onload -->
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDAYION</title>
+
+    <style>
+    .error {
+        color: red; 
+        font-size: 16px;
+        margin-top: 5px; 
+    }
+        .shake{
+            border:2px solid red;
+            animation: shake 0.3s ;
+        }
+        @keyframes shake {
+            0%,100%{
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(-5px);
+            }
+            50%{
+                transform: translateX(5px);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <label for="">NAME:</label>
+    <input type="text" name="" id="name" placeholder="Enter your name"></input>
+    <button onclick="validate()">SUBMIT</button>
+
+    <p id="error"></p>
+
+    <script>
+        function validate(){
+            let inputField =  document.getElementById("name")
+            let name = inputField.value.trim()
+            error=document.getElementById("error")
+
+            //reset error message
+            error.textContent=""
+            inputField.classList.remove('shake')
+
+            if (name===''){
+                error.textContent = "username cannot be empty"
+                inputField.classList.add("shake")
+                error.style.color = "red"
+            }
+
+            else if (name.length<3 || name.length>15){
+                error.textContent = "username must be betwwen 3 to 15 letters"
+                inputField.classList.add("shake") 
+                error.style.color = "red"
+            }
+            else if (/[^a-zA-Z0-9]/.test(name)) {  // Changed the regex to detect non-alphanumeric characters
+                error.textContent = "Special symbols are not allowed";
+                inputField.classList.add("shake");
+                error.style.color = "red"
+            } 
+            else{
+                error.textContent = "username validate"
+                error.style.color = "green"
+            }
+            setTimeout(()=>{
+            inputField.classList.remove("shake")
+         },500);
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FOOD ORDER</h1>
+    <p>click the button to order</p>
+    <p id="placeorder"></p>
+    <button onclick="placeorder()">order</button>
+    <script>
+        function placeorder(){
+            let delay = new Promise((resolve, reject) =>{
+                console.log("placing you order")
+                document.getElementById('placeorder').textContent="placing, wait"
+
+            setTimeout(() =>{
+                    resolve("food is ready")
+                },3000)
+            })
+            delay
+            .then(message=> {
+                document.getElementById("placeorder").textContent=message
+            })
+            .catch(message =>{
+                document.getElementById("place").textContent="failed"
+            })
+        }
+    </script>
+</body>
+</html>
