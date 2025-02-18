@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATION</title>
+    <style>
+        .loading-ring{
+            height: 200px;
+            width:200px;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 20px;
+            border: 20px solid;
+            border-top-color: lime;
+            border-bottom-color: magenta;
+            border-left-color:transparent;
+            border-right-color:transparent;
+            
+
+
+            /* animation-name: loader;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+            animation: loader 0.5s linear infinite alternate 2s;
+
+        }
+        .loading-ring:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes loader {
+            from{
+                transform: rotate(360deg);
+            }
+            to{
+                transform: rotate(0deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-ring"></div>
+</body>
+</html>

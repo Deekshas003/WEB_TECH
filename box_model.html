@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX_MODEL</title>
+    <style>
+        body{
+            overflow: scroll;
+        }
+        .box1{
+            height: 40px;
+            width:100px;
+            padding:50px 60px;
+            border: 5px red dotted;
+            margin:10px;
+            background-color: lightgray;
+            color: blue;
+            text-align: center;
+
+        }
+
+        .box2{
+            width: 300px;
+            height: 50px;
+            padding: 15px 15px;
+            border:3px dashed green;
+            margin: 20px auto;
+            text-align: right;
+            background:linear-gradient(to right, pink, lightgreen);
+            box-shadow: 20px 20px 5px blueviolet;
+   
+        }
+        .box3{
+            height: 20px;
+            width:auto;
+            padding: 20px;
+            box-sizing: border-box;  /* Includes padding and border in the width/height */
+            border: 10px double peachpuff;
+            border-radius: 30%;
+            margin:50px;  /*so to avoid distance from box 2 */
+            outline-offset: 15px; /* Space between the border and outline */
+            outline: 5px solid green;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        hi im deeksha
+    </div>
+
+    <div class="box2">
+        hello im her doppelganger
+    </div>
+
+    <div class="box3">
+        Olla!! Im her twin 
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transform</title>
+    <style>
+        img {
+            height: 300px;
+            width: 300px;
+            display: block; /* Ensures proper rendering of image */
+            margin: auto;  /* Centers the image on the page */
+        }
+        img:hover {
+            transition: transform 0.5s ease-in-out;
+            transform: rotate(360deg); 
+            /* transform: rotateX(-360deg); */
+            /* transform: rotateY(360deg); */
+            /* transform: rotateZ(360deg);
+
+
+    /* shortcut
+    transform: rotate(360deg) rotateX(-360deg) rotateY(360deg); */
+
+            /* transform: scale(1.1);
+            transform: scaleX(1.5);
+            transform: scaleY(2.0);
+            transform: scaleZ(2.4);
+
+            transform: skew(10deg);
+            transform: skewY(10deg);
+            transform: skewX(10deg); */
+
+
+            /*transform: translate(200deg);
+            transform: translateY(200deg);
+            transform: translateZ(200deg);
+            transform: translateX(200deg);  */
+        }
+    </style>
+</head>
+<body>
+    <img src="g.jpg" alt="Image not found">
+</body>
+</html>

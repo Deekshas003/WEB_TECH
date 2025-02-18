@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo elements</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 5rem;
+            text-align: center;
+            color: azure;
+            text-transform: uppercase;
+        }
+        h1::first-letter{
+            color:blue;
+        }
+        p{
+            color:azure;
+            font-size: 1rem;
+        }
+        p::first-line{
+            color: darkgreen;
+        }
+        h2{
+            color: white;
+            font-size: 2rem;
+        }
+        h2::after{
+            content: "🌙";
+        }
+        h2::before{
+            content:"☀";
+                }
+
+    </style>
+</head>
+<body>
+    <h1>DEEKSHA</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus culpa
+        obcaecati voluptate nihil maiores officia vero modi voluptas consectetur ea,
+        doloremque veniam deserunt dolore laudantium saepe, debitis sed magni? Magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quo dolorum 
+        soluta harum error at aperiam rerum, voluptates aliquam distinctio, reiciendis vero!
+        Dolorem provident impedit, quod nesciunt et dolor eaque?</p>
+
+    <h2>PYSPIDERS</h2>
+
+</body>
+</html>

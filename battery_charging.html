@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .charger{
+            height: 300px;
+            width: 100px;
+            background-color: white;
+            border: 2px black solid;
+            
+        }
+        .mini{
+            height:7px;
+            width:35px;
+            border-radius: 10px;
+            background-color: black;
+            position: absolute;
+            top: 125px;
+            left:115px   
+        }
+        .color{
+            width:100%;
+            height:100%;
+            background-color: red;
+            /* transform: scaleY(0); */
+            transform-origin: bottom;
+            animation: color 10s ease-in infinite;
+        }  
+
+        @keyframes color {
+            0%{
+                transform: scaleY(0);
+                background-color: red;
+            }
+            20%{
+                transform: scaleY(0.5);
+                background-color: orange;
+            }
+            50%{
+                transform: scaleY(0.8);
+                background-color: yellow;
+            }
+            100%{
+                transform: scaleY(1.0);
+                background-color: green;
+                box-shadow: 3px 3px 3px green;
+            }  
+        }
+        .charger:has(.color){
+            animation: glow 10s infinite;
+        }
+        @keyframes glow {
+            0%{
+                box-shadow: 3px 3px 15px red;
+            }
+            20%,50%{
+                box-shadow: none;
+            }
+            100%{
+                box-shadow: 3px 3px 15px green;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="charger">
+        <div class="mini"> </div>
+        <div class="color"></div>
+    </div>
+</body>
+</html>

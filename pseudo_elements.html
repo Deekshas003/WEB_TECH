@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> pseudo elements</title>
+    <style>
+        h1::before {
+          content: "🔥 ";
+          color: red;
+        }
+        h1::after {
+          content: " 🎉";
+          color: green;
+        }
+        h2::first-line {
+          font-weight: bold;
+          color: blue;
+        }
+        h3::first-letter {
+          font-size: 3rem;
+          color: red;
+          font-weight: bold;
+        }
+
+        input::placeholder {
+          color: gray;
+          font-style: italic;
+         }
+
+        p::selection {
+           background-color: yellow;
+           color: black;
+  }
+      </style>
+</head>
+<body>
+    <h1>Welcome to CSS Learning</h1>
+    <h2>The first line of this paragraph will be styled differently. 
+        The rest remains unchanged.</h2>
+    <h3>This paragraph has a styled first letter.</h3>
+
+    <input type="text" placeholder="Enter your name">
+
+    <p>Highlight this text to see the custom selection style.</p>
+
+    
+</body>
+</html>

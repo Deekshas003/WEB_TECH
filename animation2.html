@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 180px;
+            width: 180px;
+            background-color: pink;
+            position:absolute;
+            animation:move 4s linear infinite;
+            
+        }
+        @keyframes move{
+            0%{    /*startting*/
+                top:0;
+                left:0;
+            }
+            25%{    
+                top:0px;
+                left:1185px;
+            }
+            50%{    
+                top:500px;
+                left:1185px;
+                transform: rotate(360deg);
+            }
+            75%{    
+                top:450px;
+                left:0px;
+                background-color: blue;
+            }
+            100%{    
+                top:0px;
+                left:0px;
+                transform: rotateY(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

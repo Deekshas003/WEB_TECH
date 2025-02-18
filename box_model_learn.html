@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate CSS Box Model</title>
+    <style>
+        /* Box Sizing Example */
+        .box-sizing-example {
+            width: 300px;
+            height: 150px;
+            padding: 20px;
+            border: 5px solid black;
+            box-sizing: border-box;
+            background-color: lightcoral;
+            color: white;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        /* Border Radius Example */
+        .border-radius-example {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            border: 3px solid black;
+            border-radius: 20px; /* Rounded corners */
+            margin: 10px auto;
+        }
+
+        /* Outline Example */
+        .outline-example {
+            width: 250px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid blue;
+            outline: 3px dashed red;
+            outline-offset: 5px;
+            background-color: lightyellow;
+            margin: 10px auto;
+        }
+
+        /* Overflow Example */
+        .overflow-example {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid gray;
+            overflow: auto; /* Adds scrollbars when needed */
+            background-color: lightblue;
+            margin: 10px auto;
+        }
+
+        /* Shorthand Example */
+        .shorthand-example {
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+            padding: 15px 30px; /* Top/Bottom = 15px, Left/Right = 30px */
+            border: 2px dashed green;
+            background-color: lavender;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model</h1>
+
+    <div class="box-sizing-example">
+        Box Sizing: Border-box Example
+    </div>
+
+    <div class="border-radius-example">
+        Border Radius Example
+    </div>
+
+    <div class="outline-example">
+        Outline and Offset Example
+    </div>
+
+    <div class="overflow-example">
+        Overflow Example<br>
+        Content inside that might need scrolling. Add more text here to test!
+    </div>
+
+    <div class="shorthand-example">
+        Shorthand Example for Padding, Margin, and Border
+    </div>
+</body>
+</html>

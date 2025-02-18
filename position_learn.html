@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative; /* Makes the container the reference point for relative, absolute, and sticky elements */
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* Static Position */
+        .static {
+            position: static;
+            background-color: aqua;
+        }
+
+        /* Relative Position */
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: coral;
+        }
+
+        /* Absolute Position */
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: lightgreen;
+        }
+
+        /* Fixed Position */
+        .fixed {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: yellow;
+        }
+
+        /* Sticky Position */
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: pink;
+        }
+
+        /* Styling for the rest of the page for proper scrolling demo */
+        .spacer {
+            height: 1000px; /* Creates scrolling space */
+            background: linear-gradient(to bottom, lightblue, lightgray);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Static -->
+        <div class="box static">Static</div>
+
+        <!-- Relative -->
+        <div class="box relative">Relative</div>
+
+        <!-- Absolute -->
+        <div class="box absolute">Absolute (relative to container)</div>
+
+        <!-- Sticky -->
+        <div class="box sticky">Sticky (sticks when scrolling)</div>
+    </div>
+
+    <!-- Fixed -->
+    <div class="box fixed">Fixed (always in viewport)</div>
+
+    <!-- Spacer for scrolling -->
+    <div class="spacer"></div>
+</body>
+</html>

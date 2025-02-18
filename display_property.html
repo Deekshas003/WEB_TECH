@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>DISPLAY_PROPERTY</title>
+    <style>
+    .block{
+        background-color:black;
+        height: 100px;
+        width: 200px;
+        display:block;
+    }
+
+    .none:hover{
+        display:none;
+    }
+
+    .inline{
+        display:inline;
+        background-color: aqua;
+    }
+
+    .inline_block{
+        display: inline-block;
+        height: 200px;
+        width:200px;
+    }
+
+    .flex{
+        display: flex;
+        gap: 50px;
+        background-color: blue;
+        justify-content: baseline;
+    }
+    .item{
+        width: 50px;
+        height: 80px;
+        background-color: coral;
+    }
+    
+
+    .grid{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);       /*in a row how many item we need, 2 : 2 item in a row */
+        gap: 30px;
+        background-color: green;
+    }
+    .items{
+        
+        background-color: peachpuff;
+        height: 200px;
+        text-align:justify;
+    }
+</style>
+</head>
+<body>
+    <h1 class="block">
+        this is block element   <!-- this has been blocked, user cant see --> 
+    </h1>
+
+    <h1 class="none">
+        hover over me to hide this element   <!-- when cursor goes it disappears -->
+    </h1>
+
+    <h1 class="inline">inline element</h1>
+    <h2 class="inline">another inline element</h2>  <!-- here removes gap btw the lines and height and width cant set-->
+
+    <h1 class="inline_block">hi im tom</h1>
+    <h1 class="inline_block">hi im jerry, i love cheese </h1> <!-- here we can add height and width and create space with the elements -->
+
+    <div class="flex">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+
+    <div class="grid">
+        <div class="items">item 1</div>
+        <div class="items">item 2</div>
+        <div class="items">item 3</div>
+    </div>
+</body>
+</html>

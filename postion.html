@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION</title>
+    <style>
+        body{
+            overflow: scroll;
+        }
+        .static{
+            position: static;
+            background-color: bisque;
+            width: 100px;
+            height: 50px;
+        }
+
+        .relative{
+            position: relative;
+            top: 520px;
+            bottom: 30px;
+            left: 50px;
+            right:4px;
+            background-color: burlywood;
+            width: 150px;
+            height:30px;
+
+        }
+
+        .absolute{
+            position: absolute;
+            top:150px;
+            right: 4px;
+            background-color: lightgreen;
+            width: 200px;
+            height: 45px;
+        }
+
+        .fixed{
+            position: fixed;
+            top:250px;
+            background-color: yellow;
+            text-align: center;
+            height: 200px;
+        }
+
+        .sticky{
+            position: sticky;
+            top: 500px;
+            background-color: beige;
+            height: 50px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="static"> STATIC POSITION </div>
+
+    <div class="relative">RELATIVE POSITION</div>
+
+    <div class="absolute">ABSOLUTE POSITION</div>
+
+    <div class="fixed">FIXED POSITION</div>
+
+    <div class="sticky" ">STICKY POSITION</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG COLOR CHANGE</title>
+    <style>
+        body{
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin:0px;
+           
+        }
+        .mobile{
+            width: 200px;
+            height: 470px;
+            border-radius: 3%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 15px  rgba(255,255,255,0.5);
+        }
+        .screen{
+            width: 180px;
+            height:430px;
+            border-radius: 15px;
+            border: 2px solid black;
+            background-size: 200% 200%;
+            background: linear-gradient(to right white,pink);
+            position: absolute;
+            top:45px;
+            left:70px;
+            animation: color 2s linear  infinite ;
+        }
+        .circle{
+            background-color: #000;
+            height:12px;
+            width: 12px;
+            border-radius: 50%;;
+            position: absolute;
+            top:-7px;
+            left:85px;
+        }
+        .battery{
+            position: absolute;
+            left:150px;
+            top:3px;
+            
+        }
+        .signal{
+            position: absolute;
+            left:130px;
+            top:3px; 
+        }
+        .time{
+            position: absolute;
+            left:4px;
+            top:6px;
+            font-weight: bold; 
+        }
+        .wifi{
+            position: absolute;
+            left:40px;
+            top:3px; 
+        }
+
+        /* navigation */
+        .navbar{
+            width:50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            gap:60px;
+            margin:18px;
+            position: relative;
+            top:425px;
+            border-radius: 0 0 20px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        @keyframes color{
+            0%{
+                background-position: 0% 50%;
+                background-color: pink;
+            }
+            50%{
+                background-position: 100% 50%;
+                background-color: purple;
+            }
+            100%{
+                background-position: 0% 50%;
+                background-color: palegoldenrod;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="mobile">
+        <div class="screen">
+            <div class="circle">
+            </div>
+            <div class="time">11:11</div>
+            <div class="signal">📶</div>
+            <div class="battery">🪫</div>
+            <div class="wifi">🛜</div>
+
+        </div>
+        <div class="navbar">
+            <div class="nav-button">←</div>
+            <div class="nav-button">⬤</div>
+            <div class="nav-button">▢</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class</title>
+    <style>
+        .link:link{  /* :link targets only link */ 
+            color:blueviolet;
+            text-decoration: none;
+        }
+
+        .link2:visited{
+            color:greenyellow;
+            text-decoration:none;
+        }  
+
+        .link:active{
+            color:red;
+        }
+
+        .link4:hover{
+            color: orange;
+             text-decoration-line:wavy;
+             text-decoration-style: wavy;
+        }
+
+        .my-input:focus{
+            outline: 2px solid green;
+            background-color: lightyellow;
+        }
+
+        ul>li:first-child {
+            color: red;
+            font-weight: bold;
+        }
+        ul>li:last-child {
+            color: blue;
+            font-style: italic;
+         }
+        ul>li:nth-child(3) {
+        color: green;
+        }
+
+
+        ol>li:nth-child(even) {
+          background-color: pink;
+         }
+         ol>li:nth-child(odd) {
+             background-color: white;
+        }
+        ol> li:not(:first-child) {
+            color: gray;
+        }
+
+        :is(h1, h2, h3) {
+            font-family: Arial, sans-serif;
+            font-size: 1rem; /* Use font-size instead of size */
+        }
+
+
+        input[type='radio']:checked+label{
+             color: green;
+             font-weight: bold;
+        }
+
+        input:disabled {
+             background-color: #ccc;
+            color: #999;
+        }
+        input.aa:enabled {
+             border: 2px solid red;
+             font-style:normal;
+        }
+        input:placeholder-shown {
+            color: gray;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.linkedin.com/in/deeksha-s-a10308243/" class="link">LINKEDIN </a>
+    <div class="link">hi</div>
+
+    <a href="https://www.google.com" class="link2">Google</a>
+    <br>
+    <a href="https://www.google.com" class="link3">Google</a>
+    <br>
+    <a href="#" class="link4">Google</a>
+    <br>
+    <input type="text" placeholder="Type here" class="my-input">
+    <br>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+    </ul>
+    <ol>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+    </ol>
+
+
+    <h1>hi</h1>
+    <h2>holla</h2>
+    <h3>heloo</h3>
+
+    <form>
+        <input type="radio" name="gender" id="male"><label for="male">Male</label><br>
+        <input type="radio" name="gender" id="female"><label for="female">Female</label><br>
+        <input type="radio" name="gender" id="others"><label for="others">Others</label>
+      </form>
+
+      <input type="text" placeholder="Disabled input" disabled>
+      <input type="text" placeholder="Enabled input" class="aa">
+      <input type="text" placeholder="Type here" >
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drooping_Letters</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        span{
+            display: inline-block;
+            width: 25px;
+            color:aqua;
+            animation: drop 3s ease-out forwards;
+        }
+        @keyframes drop {
+            0%{
+                opacity: 0;
+                transform: translateY(0px);
+            }
+
+            100%{
+                opacity: 1px;
+                transform: translateY(50px);
+                color: black;
+            }
+        
+
+        
+        }
+        span:nth-child(1){
+            animation-delay: 0.5s;
+        }
+        span:nth-child(2){
+            animation-delay: 1.0s;
+        }
+        span:nth-child(3){
+            animation-delay: 1.5s;
+        }
+        span:nth-child(4){
+            animation-delay: 2.0s;
+        }
+        span:nth-child(5){
+            animation-delay: 2.5s;
+        }
+        span:nth-child(6){
+            animation-delay: 3.0s;
+        }
+        span:nth-child(7){
+            animation-delay: 3.5s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <span>D</span>
+        <span>E</span>
+        <span>E</span>
+        <span>K</span>
+        <span>S</span>
+        <span>H</span>
+        <span>A</span>
+</div>
+</body>
+</html>
